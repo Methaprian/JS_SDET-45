@@ -1,0 +1,128 @@
+public class ArrayAssignmentTest {
+
+	@Test
+	public void arrayDuplicates() {
+		int[] arr= {1,2,5,4,1,4,4};
+		System.out.println("Duplicate Elements in the array : ");
+		boolean arr1[]=new boolean[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			int count=1;
+			for (int j = i+1; j < arr.length; j++) {
+				if(arr1[i]==false) {
+					if (arr[i]==arr[j]) {
+						arr1[j]=true;
+						count++;
+					}
+				}
+			}
+			if(count>1) {
+				System.out.println(arr[i]);
+			}
+		}
+	}
+
+	@Test
+	public void arrayDuplicateOccurences() {
+		int[] arr= {1,2,5,4,1,4,4};
+		System.out.println("Duplicate Elements in the array & No. of Occurences are : ");
+		boolean arr1[]=new boolean[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			int count=1;
+			for (int j = i+1; j < arr.length; j++) {
+				if(arr1[i]==false) {
+					if (arr[i]==arr[j]) {
+						arr1[j]=true;
+						count++;
+					}
+				}
+			}
+			if(count>1) {
+				System.out.println(arr[i]+ " ---> "+count);
+			}
+		}
+	}
+
+	@Test
+	public void arrayElementOccurences() {
+		int[] arr= {1,2,5,4,1,4,4};
+		System.out.println("No. of Occurences of all the Elements are : ");
+		boolean arr1[]=new boolean[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			int count=1;
+			for (int j = i+1; j < arr.length; j++) {
+				if(arr1[i]==false) {
+					if (arr[i]==arr[j]) {
+						arr1[j]=true;
+						count++;
+					}
+				}
+			}
+			if(arr1[i]==false) {
+				System.out.println(arr[i]+ " ---> "+count);
+			}
+		}
+	}
+	
+	@Test
+	public void deleteDuplicates() {
+
+		int[] arr= {1,2,5,4,1,4,4};
+		for (int i = 0; i < arr.length; i++) {
+			for (int k = i+1; k < arr.length; k++) {
+				if (arr[i]==arr[k]) {
+					arr[i]=-1;
+				}
+			}
+		}
+		System.out.print("[ ");
+		for (int i = 0; i < arr.length; i++) {
+			if (arr[i]!=-1) {
+				System.out.print(arr[i]+" ");
+			}
+		}
+		System.out.print("]");
+	}
+	
+	@Test
+	public void arraySort() {
+		int[] arr = {1,2,5,4,1,4,4};
+		for (int i = 0; i < arr.length-1; i++) {
+			for (int j = 0 ; j < arr.length-1; j++) {
+				if(arr[j]> arr[j+1]) {
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}
+		System.out.print("[ ");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+		System.out.print("]");
+	}
+
+	@Test
+	public void arrayMaxNo() {
+		int[] arr= {1,2,5,4,1,4,4};
+		int large=arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(large<arr[i]) {
+				large=arr[i];
+			}
+		}
+		System.out.println("The Largest No. in the array is : "+large);
+	}
+
+	@Test
+	public void arrayMinNo() {
+		int[] arr= {1,2,5,4,1,4,4};
+		int sm=arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(sm>arr[i]) {
+				sm=arr[i];
+			}
+		}
+		System.out.println("The Smallest No. in the array is : "+sm);
+	}
+}
