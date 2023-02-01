@@ -1,0 +1,120 @@
+1. Array Sorting :
+	
+var arr=[1,2,5,4,1,4,4]
+for (let i = 0; i < arr.length-1; i++) {
+    for (let j = 0; j < arr.length-1; j++) {
+        if(arr[j]>arr[j+1]){
+            let t=arr[j]
+            arr[j]=arr[j+1]
+            arr[j+1]=t
+        }
+    }
+}
+for (let index = 0; index < arr.length; index++) {
+    console.log(arr[index]);    
+}
+
+
+2. Array Duplicates :
+
+
+var arr=[1,2,5,4,1,4,4]
+console.log("Duplicate Elements in the Array : ");
+for (let i = 0; i < arr.length; i++) {
+	var count=0;
+	for (let j =0; j < arr.length; j++) {
+		if(arr[i]==arr[j]) {
+			if (j<i) {
+				break
+            }
+			count++;
+	}
+}
+if(count>1) {
+	console.log(arr[i]);
+	}
+}
+
+
+3. Array Duplicate Occurences:
+
+
+var arr=[1,2,5,4,1,4,4]
+console.log("Duplicate Elements in the Array : ");
+for (let i = 0; i < arr.length; i++) {
+	var count=0;
+	for (let j =0; j < arr.length; j++) {
+		if(arr[i]==arr[j]) {
+			if (j<i) {
+				break
+            }
+			count++;
+	}
+}
+if(count>1) {
+	console.log(arr[i]+" ---> "+count);
+	}
+}
+
+
+4. Array Element Occurences :
+
+var arr=[1,2,5,4,1,4,4]
+console.log("Element Occurences in the Array : ");
+for (let i = 0; i < arr.length; i++) {
+	var count=0;
+	for (let j =0; j < arr.length; j++) {
+		if(arr[i]==arr[j]) {
+			if (j<i) {
+				break
+            }
+			count++;
+	}
+}
+if(count>=1) {
+	console.log(arr[i]+" ---> "+count);
+	}
+}
+
+
+5. Remove Array Duplicates :
+
+var arr=[1,2,5,4,1,4,4]
+console.log("Duplicate Elements in the Array : ");
+for (let i = 0; i < arr.length; i++) {
+	for (let j =i+1; j < arr.length; j++) {
+		if(arr[i]==arr[j]) {
+			arr[j]=0
+		}
+	}
+}
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index]!=0) {
+        console.log(arr[index])
+    }
+}
+
+
+6. Maximum/Largest Value in the Array :
+
+var arr=[1,2,5,4,1,4,4]
+let max=arr[0]
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index]>max) {
+        max=arr[index]
+    }
+}
+console.log("The Maximum Value in the Array is : "+max);
+
+
+
+7. Minimum/Smallest Value in the Array :
+
+var arr=[1,2,5,4,1,4,4]
+let max=arr[0]
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index]>max) {
+        max=arr[index]
+    }
+}
+console.log("The Maximum Value in the Array is : "+max);
