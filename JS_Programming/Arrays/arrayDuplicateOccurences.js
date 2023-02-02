@@ -1,4 +1,5 @@
-var arr=[1,2,5,4,1,4,4]
+//var arr=[1,2,5,4,1,4,4]
+var arr=[3,5,6,1,2,1,1]
 console.log("Duplicate Elements in the Array : ");
 for (let i = 0; i < arr.length; i++) {
 	var count=0;
