@@ -1,0 +1,102 @@
+1. Remove Vowels from String
+
+let str='testyantra'
+let str1=""
+for (const key in str) {
+    if (!(str[key]=='a'||str[key]=='e'||str[key]=='i'||str[key]=='o'||str[key]=='u'||str[key]=='A'||str[key]=='E'||str[key]=='I'||str[key]=='O'||str[key]=='U')) {
+        str1=str1+str[key]
+        
+    }
+}
+console.log(str1);
+
+2. Print Repeated Character in the String
+
+let str="testyantra"
+for (let i = 0; i < str.length; i++) {
+    let ch=str.charAt(i)
+    var count=0
+        for (let j = 0; j < str.length; j++) {
+            if (ch==str.charAt(j)) {
+                if (j<i) {
+                    break
+                }
+                count++
+            }
+        } 
+    if (count>=1) {
+        console.log(ch+" ---> "+count);
+    }   
+}
+
+3. Upper Case 
+
+let str="testyantra"
+let str1=""
+for (const key in str) {
+    if (str[key]=='t') {
+        str1=str1+'T'
+    } else {
+        str1=str1+str[key]
+    }        
+}
+console.log(str1);
+
+4. Vowels and Consonants
+
+let str="testyantra"
+let countC=0
+let countV=0
+for (let i = 0; i < str.length; i++) {
+    if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U'){
+        countV++
+    }else{
+        countC++
+    }
+}
+console.log("Consonants : "+countC);
+console.log("Vowels : "+countV);
+
+
+5. Vowels in the String
+
+let str="testyantra"
+let countA=0
+let countE=0
+let countI=0
+let countO=0
+let countU=0
+for (let i = 0; i < str.length; i++) {
+    let ch=str.charAt(i)
+    if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='e'||ch=='I'||ch=='O'||ch=='U'){
+        if (ch=='e'||ch=='E') {
+            countE++
+        }
+        if (ch=='a'||ch=='A') {
+            countA++
+        }
+        if (ch=='i'||ch=='I') {
+            countI++
+        }
+        if (ch=='o'||ch=='O') {
+            countO++
+        }
+        if (ch=='u'||ch=='U') {
+            countU++
+        }
+    }
+}
+console.log("a ----> "+countA);
+console.log("e ----> "+countE);
+console.log("e ----> "+countI);
+console.log("e ----> "+countO);
+console.log("e ----> "+countU);
+
+6. Reverse a String
+
+let str="testyantra"
+let str1=""
+for (let i = str.length-1; i >=0; i--) {
+    str1=str1+str[i]
+}
+console.log(str1);

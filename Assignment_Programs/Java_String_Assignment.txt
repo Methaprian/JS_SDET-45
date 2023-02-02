@@ -1,0 +1,117 @@
+1. Vowels in String :	
+
+	@Test
+	public void vowelsInString() {
+		String str="testyantra";
+		char[] ch=str.toCharArray();
+		int countE=0;
+		int countA=0;
+		System.out.println("Vowels   |   Count");
+		System.out.println("------------------");
+		for (int i = 0; i < ch.length; i++) {
+			if (ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u'||ch[i]=='A'||ch[i]=='E'||ch[i]=='I'||ch[i]=='O'||ch[i]=='U') {
+				if (ch[i]=='e') {
+					countE++;
+				}
+				if (ch[i]=='a') {
+					countA++;
+				}
+			}
+		}
+		System.out.println("   e     |   "+countE);
+		System.out.println("   a     |   "+countA);
+	}
+
+
+2. Reverse String :
+
+	@Test
+	public void reverseString() {
+		String str="testyantra";
+		String str2="";
+		char[] ch=str.toCharArray();
+		for (int i = ch.length-1; i>=0; i--) {
+			str2=str2+ch[i];
+		}
+		System.out.println("The Reversed String is : "+str2);
+	}
+
+
+3. Print Repeated Characters in String :
+
+	@Test
+	public void printRepeatedCharacters() {
+		String str="testyantra";
+		for (int i = 0; i < str.length(); i++) {
+			char ch=str.charAt(i);
+			int count=0;
+			for (int j = 0; j < str.length(); j++) {
+				if(ch==str.charAt(j)) {
+					if(j<i) {
+						break;
+					}
+					count++;
+				}
+			}
+			if (count>=1) {
+				System.out.println(ch+" ---> "+count);
+			}
+		}
+	}
+
+
+4. Number of Vowels and Consonants : 
+
+	@Test
+	public void countVowelsConsonants() {
+		String str = "testyantra";
+		int vowel = 0;
+		int consonant = 0;
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+				vowel++;
+			}
+			else {
+				consonant++;
+			}
+		}
+		System.out.println("Vowels   |   consonent");
+		System.out.println("----------------------");
+		System.out.println("  "+vowel+"      |      "+ consonant);
+	}
+
+
+5. String Without Vowels :
+
+	@Test
+	public void stringWithoutVowels() {
+		String str = "testyantra";
+		String str1="";
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if (!(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')) {
+				str1 = str1+ch;
+			}
+		}
+		System.out.println(str1);
+	}
+
+
+6. UpperCase particular Character in String :
+
+	@Test
+	public void upperCaseTest() {
+		String str = "testyantra";
+		String str1="";
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			if(ch=='t') {
+				str1=str1+(char)(ch-32);
+			}else {
+				str1+=ch;
+			}
+		}
+		System.out.println(str1);
+	}
+}
