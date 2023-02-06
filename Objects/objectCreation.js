@@ -5,7 +5,7 @@ var employeeDetails={
     skillSet : ['JS','API',"Java","Selenium"],
     location : function(){
         loc="Bangalore"
-        return this.loc
+        return loc
     },
     companyDetails : {
         company_Name: "TYSS",
@@ -24,3 +24,13 @@ console.log("<---- Object.Object ----> ");
 console.log(employeeDetails.companyDetails);
 console.log("<---- Object.Object.Property ----> ");
 console.log(employeeDetails.companyDetails.Company_Location);
+
+//Modify an Object Property
+console.log(" ----> Modification <----");
+employeeDetails.skillSet=['JavaScript','Selenium','Manual Testing','Java']
+console.log(employeeDetails.skillSet);
+
+//Deletion of an Object Property
+console.log(" ----> Deletion of a Property <---- ");
+delete employeeDetails.designation
+console.log(employeeDetails);
