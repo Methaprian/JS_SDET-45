@@ -1,0 +1,4 @@
+1. Sorting without inbuilt methods
+2. Delete Duplicates
+3. filter()
+4. Sort using built-in methods
