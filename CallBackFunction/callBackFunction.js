@@ -18,4 +18,4 @@ function arithmetic(data1,data2,operation){
     operation(data1,data2);
 }
 
-arithmetic(45,44,percent)
+arithmetic(45,10,percent)
