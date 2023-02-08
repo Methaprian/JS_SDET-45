@@ -2,3 +2,4 @@
 2. Delete Duplicates
 3. filter()
 4. Sort using built-in methods
+5. Object Creation using Class

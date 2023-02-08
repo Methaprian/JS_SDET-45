@@ -21,7 +21,7 @@ function statement(val) {
 // console.log(arr.unshift('a','b')); ----> Adds element at the 0th Index Permanently
 // console.log(arr.sort((a,b)=>b-a)); ----> Sorts the array in Assending/Descending Order Permanently
 // console.log(arr.toString()); ----> Converts Array into String
-// console.log(arr.map(statement));  ----> Returns an Array of elements based on the function passed 
+console.log(arr.map(statement));  //----> Returns an Array of elements based on the function passed 
 // console.log(arr.find(statement)); //
 // console.log(arr.filter(statement));
 // console.log(arr.splice(2));
