@@ -1,6 +1,5 @@
-function sum(a,b){
-    console.log(a+b);
-    console.log(arguments);
+function Admin(u_name,pwd){
+    console.log(u_name);
+    console.log(arguments)
 }
-sum(7,5,9,23,45,1,25) // Based on the number of arguments passed, the function will be executed. Based on the function designed i.e, 
-                        //based on the no. of arguments passed in the function
+Admin("SKM","123*","skm@gmail.com",9876543210)
