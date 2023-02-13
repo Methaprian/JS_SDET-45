@@ -21,7 +21,7 @@ function activity(act_Name,act_Desc){
     console.log(`Activity Name : ${act_Name} , Participant ID : ${this.s_id} , Participant Name : ${this.s_name} , Activity Description : ${act_Desc}`);
 }
 
-// activity.call(stud,"Cricket","T-10 Tournament")
+activity.call(stud,"Cricket","T-10 Tournament")
 
 
 //  * This an Example for bind()
