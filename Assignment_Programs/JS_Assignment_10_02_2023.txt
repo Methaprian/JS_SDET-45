@@ -1,0 +1,215 @@
+=======================================================
+let binary=[0,1,0,0,1,1,1]
+let count0s=0
+let count1s=0
+for (let index = 0; index < binary.length; index++) {
+    if (binary[index]==0) {
+        count0s++
+    } else {
+        count1s++
+    }
+}
+console.log(`No of 0's in the array is : ${count0s}
+No of 1's in the array is : ${count1s}`);
+=======================================================
+var a=10
+var b=20
+var c=30
+
+var d=53
+var e=10
+var x="3"
+
+console.log(a+b+c); // ---> Number Output 
+console.log(d+e+x); // ---> String Outupt
+console.log(typeof(d+e+x));
+=======================================================
+for (let index = 1; index <=100; index++) {
+    if(index%3==0 && index%5==0){
+        console.log(`${index} Multiple of 3 and 5`);
+    }else if (index%3==0) {
+        console.log(`${index} Multiple of 3`);
+    } else if(index%5==0){
+        console.log(`${index} Multiple of 5`);
+    }
+}
+=======================================================
+for (let i = 0; i < 2; i++) {
+    console.log(i); // 0
+                    // 1
+}
+console.log(i); // i is not defined 
+=======================================================
+let rn=Math.random()*(30-10)+10
+console.log(Math.trunc(rn));
+// console.log(rn);
+=======================================================
+let arr=[12,45,4,6,54,67]
+arr.splice(0)
+console.log(arr);
+=======================================================
+const a=10
+{
+    const a=20
+    console.log(a); // ---> 20
+}
+console.log(a); // ---> 10
+=======================================================
+let arr=[10,13,67,85,90,86,64,3,44,60]
+let EvenArr=[]
+let OddArr=[]
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index]%2==0) {
+        EvenArr.push(arr[index])
+    }
+    if (arr[index]%2!=0) {
+        OddArr.push(arr[index])
+    }  
+}
+console.log("Even Nos are "+EvenArr);
+console.log("Odd Nos are "+OddArr);
+// console.log(`Even Nos are ${EvenArr}
+// Odd Nos are ${OddArr}`);
+=======================================================
+let arr=[10,13,67,85,90,86,64,3,44,60]
+let sum=0
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index]%2!=0) {
+        sum=sum+arr[index]
+    }
+}
+console.log("Sum of Odd nos in the array is : "+sum);
+=======================================================
+let arr=[1,2,4,3,5,7,11,13,24,21,68,17]
+for (const key in arr) {
+    let count =0
+    for (let index = 0; index <=arr[key]; index++) {
+        if (arr[key]%index==0) {
+            count++
+        }
+    }
+    if (count==2) {
+        console.log(`${arr[key]} is Prime`);
+    }else{
+        console.log(`${arr[key]} is not prime`);
+    }
+}
+======================================================
+const fruits=["mango","apple"]
+console.log(fruits.length); // ----> 2
+console.log(fruits[0]); // ----> mango
+======================================================
+let arr=[10,24,32,45,10,24,76,89,60,45]
+console.log("Unique Elements in the Array : ");
+for (let i = 0; i < arr.length; i++) {
+	for (let j =i+1; j < arr.length; j++) {
+		if(arr[i]==arr[j]) {
+			arr[j]=0
+		}
+	}
+}
+for (let index = 0; index < arr.length; index++) {
+    if (arr[index]!=0) {
+        console.log(`${arr[index]}`)
+    }
+    // console.log(arr[index]);
+}    
+=======================================================
+let str="I am an employee of TestYantra"
+console.log("The Upper Case letters Present in the Given String are : ");
+for (let index = 0; index < str.length; index++) {
+    if (str.charCodeAt(index)>=65 && str.charCodeAt(index)<=90) {
+        console.log(str[index]);
+    }
+}
+=======================================================
+let str="I am an employee of TestYantra"
+console.log("Input String : "+str);
+// Using inbuilt Methods
+let arr=str.split(" ")
+// console.log(arr);
+let arr1=[]
+for (let index = 0; index < arr.length; index++) {
+    arr1=arr1+arr[index]
+}
+console.log("String Without Spaces(Using built-in Methods) : "+arr1);
+
+// Without Using inbuilt methods
+let str1=""
+
+for (let index = 0; index < str.length; index++) {
+    let ch=str.charAt(index)
+    if (str[index]==" ") {
+        str1[index]=""
+    }else{
+        str1=str1+ch
+    }
+}
+console.log("String Without Spaces(Without using built-in Methods) : "+str1);
+==========================================================
+const stud={
+    stud_id:1234
+}
+stud.stud_id=5678
+console.log(stud.stud_id);  // ----> if an object is declared as const, the parameter present in the object can be modified
+                            // ----> If a variable is not an object but declared as const, 
+===========================================================
+let str="I am an employee of TestYantra"
+function rev(string){
+    return string.split("").reverse().join("").split(" ").reverse().join(" ")
+}
+console.log(rev(str));  // I ma na eeyolpme fo artnaYtseT
+===========================================================
+let country=[
+    {fname:"abc",address:"India"},
+    {fname:"def",address:"Europe"},
+    {fname:"rst",address:"India"},
+    {fname:"xyz",address:"Europe"},
+    {fname:"mno",address:"Russia"}
+]
+// Count of people living in India
+let count=0
+for (const key in country) {
+    if (country[key].address=="India") {
+        count++
+    }
+}
+console.log(`No. of People Living in India is : ${count}`);
+
+// Country Name ==> Count
+let IndiaCount=0
+let EuropeCount=0
+let RussiaCount=0
+for (const key in country) {
+    if (country[key].address=="India") {
+        IndiaCount++
+    }
+    if (country[key].address=="Europe") {
+        EuropeCount++
+    }
+    if (country[key].address=="Russia") {
+        RussiaCount++
+    }
+}
+console.log(`India ==> ${IndiaCount}`);
+console.log(`Europe ==> ${EuropeCount}`);
+console.log(`Russia ==> ${RussiaCount}`);
+==================================================
+let range=15
+let init=0
+let nextInit=1
+let sum=0
+for (let index = 1; index <=range; index++) {
+    console.log(init);
+    sum=init+nextInit
+    init=nextInit
+    nextInit=sum
+}
+==================================================
+(function(){a=b=c=5})
+console.log(b); // Error ----> b is not defined 
+==================================================
+Is JavaScript Static or Dynamic.?
+	
+	JavaScript is Dynamic because the type of the variable declared is decided based 
+on the value (Number,String,Boolean) assigned during Run-Time.

@@ -1,0 +1,38 @@
+let stud={
+	sname:"SKM",
+	sid:"12387100",
+	sdata:function(){
+		console.log(`Student Name : ${sname}
+Student ID : ${sid}`)
+	}
+}
+
+let admin={
+	ad_name:"Indhu",
+	ad_id:"TR356",
+	ad_data:function(){
+		console.log(`Admin Name : ${ad_name}
+Admin ID : ${ad_id}`)
+	}
+}
+
+function activity(act_name,act_desc){
+	console.log(`Activity Name : ${act_name}
+Activity Description : ${act_desc}
+Participant Name : ${this.sname}
+Participant ID : ${this.ad_id}`)
+}
+
+//call()
+
+activity.call(stud,"Chess","Singles Tournament") 
+
+
+//bind()
+
+let BIND=activity.bind(admin,"Football","5's Tournament")
+BIND()
+
+
+//apply()
+activity.apply(stud,["Cricket","Tennis Ball Tournament"])
