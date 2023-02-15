@@ -1,0 +1,111 @@
+======================================================
+1. Consonants Count
+======================================================
+function consonant(input){
+    for (let i = 0; i < input.length; i++) {
+        let count=0
+        for (let j = 0; j < input.length; j++) {
+            if(input[i]==input[j]){
+                if(j<i){
+                    break
+                }
+                count++
+            }
+        }
+        if (count>=1) {
+            if (!(input[i]=='a'||input[i]=='e'||input[i]=='i'||input[i]=='o'||input[i]=='u'||input[i]=='A'||input[i]=='E'||input[i]=='I'||input[i]=='O'||input[i]=='U')) {
+                console.log(`${input[i]} --> ${count}`);
+            }
+        }
+    }
+}
+consonant("methaprian")
+
+=====================================================
+2. Pgm : good morning
+=====================================================
+function STR(str) {
+    console.log(str.split('o'));
+}
+//STR("good morning")
+=====================================================
+3. Convert vowels in a string to UpperCase
+=====================================================
+function CAPS(str){
+    let str1=""
+    for (let i = 0; i < str.length; i++) {
+        ch=str.charAt(i)
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'){
+            str1=str1+ch.toUpperCase()
+        }else{
+            str1=str1+ch
+        }
+    }
+    console.log(str1);
+}
+CAPS("good morning")
+
+=====================================================
+4. Multiples of 5 and 10
+=====================================================
+function multiple_5_10(inputNum){
+    if (inputNum%5==0 && inputNum%10==0) {
+        console.log(`${inputNum} is a multiple of 5 and 10.`);
+    } else if(inputNum%5==0){
+        console.log(`${inputNum} is a multiple of 5`);
+    } else if(inputNum%10==0){
+        console.log(`${inputNum} is a multiple of 10`);
+    }
+    else {
+        console.log(`No multiples of 5 and 10 ${inputNum}`);
+    }
+}
+multiple_5_10(8)
+
+
+=====================================================
+5. Fetch 3rd Element : [javascript,selenium,api,cypress]
+=====================================================
+let arr=["javascript", "selenium", 'api', "cypress"]
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i].slice(2,3)+"");
+}
+
+// console.log(arr.map(value => value.charAt(2)).toString());
+=====================================================
+
+
+=====================================================
+6. Store all Vowels present in String inside an Array (o/p should be in the form of Array)
+=====================================================
+let str="Methaprian"
+let arr=new Array()
+for (let i = 0; i < str.length; i++) {
+    if (str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u'||str[i]=='A'||str[i]=='E'||str[i]=='I'||str[i]=='O'||str[i]=='U') {
+        arr.push(str[i])
+    }
+}
+console.log(arr);
+
+
+=====================================================
+7. If 3rd Character of a word in a string is Vowel, capitalize the 1st Character
+=====================================================
+let str="good morning welcome to javascript session"
+let arr=str.split(" ")
+const VOWELS=['a','e','i','o','u']
+let RESULT=""    
+
+for (let i = 0; i < arr.length; i++) {
+    let sword=arr[i]
+           
+        if (VOWELS.includes(sword[2])) {
+            let CHAR=sword[0].toUpperCase()
+            arr[i]=CHAR+sword.substring(1)
+        }
+        RESULT=arr.join(" ")
+    
+}
+console.log(RESULT);
+
+======================================================
