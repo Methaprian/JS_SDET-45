@@ -9,7 +9,7 @@ function statement(val) {
     return val
 }
 // console.log(arr.concat(arr1)); //---> Combines 2 arrays and adds all the Data present in the 2nd array at the last Index value 
-// console.log(arr.join('->')); //----> Replaces all the Seperators
+console.log(arr.join('->')); //----> Replaces all the Seperators and returns a String
 // console.log(arr.lastIndexOf(50)); //----> Returns the Index value of the element if the element is present else returns -1
 // console.log(arr.length); //------> Returns the Length of the array
 // console.log(arr.pop()); //------> Returns and Removes the value present in the Last Index permanently
@@ -26,6 +26,6 @@ function statement(val) {
 // console.log(arr.filter(statement));
 // console.log(arr.splice(2));
 // console.log(arr.copyWithin(3,4));
-console.log(arr.fill(1,2,4));
+// console.log(arr.fill(1,2,4));
 // console.log(arr.entries()); ----------> Pending
 console.log(arr);

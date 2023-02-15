@@ -1,0 +1,105 @@
+=============================================
+extDebug.html
+=============================================
+<html>
+	<head>
+		<title>Debugging Process</title>
+	</head>
+	<body>
+		<h1>Debug Started</h1>
+		<script src="./MOCK.js"></script>
+	</body>
+</html>
+
+==============================================
+MOCK.js
+==============================================
+
+let stud_id='1233057'
+function stud(sname){
+	this.sname=sname
+	return sname
+}
+console.log(stud("SKM"))
+==============================================
+
+let arr=[123,1234,5647,8764]
+arr.foreach(ele =>{
+	console.log(ele)
+})
+
+==============================================
+arraySortDescending.js
+==============================================
+let arr=[8,45,76,2,65,9]
+--------------------------------------------------------------
+//Descending
+for (let i = 0; i < arr.length-1; i++) {
+    for (let j = 0; j < arr.length-1; j++) {
+        if(arr[j]<arr[j+1]){
+            let t=arr[j]
+            arr[j]=arr[j+1]
+            arr[j+1]=t
+        }
+    }
+}
+for (let index = 0; index < arr.length; index++) {
+    console.log(arr[index]);    
+}
+-------------------------------------------------------------
+//Ascending
+for(let i=0;i<arr.length-1;i++){
+	for(j=0;j<arr.length-1;j++){
+		if(arr[j]>arr[j+1]){
+			 let t=arr[j]
+            		arr[j]=arr[j+1]
+            		arr[j+1]=t
+		}
+	}
+}
+for(let i=0;i<arr.length;i++){
+	console.log(arr[i])	
+}
+==============================================
+callBack.js
+==============================================
+
+function cricket(no_of_Teams,no_of_participants){
+	console.log(" ---------> Cricket Tournament <---------")
+	console.log(`Total Teams : ${no_of_Teams}
+Total No of  Participants : ${no_of_participants}`)
+}
+
+function football(no_of_Teams,no_of_participants){
+	console.log(" ---------> Football 5's Tournament <---------")
+	console.log(`Total Teams : ${no_of_Teams}
+Total No of  Participants : ${no_of_participants}`)
+}
+
+function chess(no_of_Teams,no_of_participants){
+	console.log(" ---------> Chess Singles Tournament <---------")
+	console.log(`Total Teams : ${no_of_Teams}
+Total No of  Participants : ${no_of_participants}`)
+}
+
+function volleyball(no_of_Teams,no_of_participants){
+	console.log(" ---------> Beach Volleyball Tournament <---------")
+	console.log(`Total Teams : ${no_of_Teams}
+Total No of  Participants : ${no_of_participants}`)
+}
+
+function sportActivity(activity,no_of_Teams,no_of_participants){
+	activity(no_of_Teams,no_of_participants)
+}
+
+sportActivity(football,10,50)
+
+
+
+
+
+
+
+
+
+
