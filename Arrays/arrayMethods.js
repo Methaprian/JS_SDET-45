@@ -2,6 +2,7 @@ let arr=[10,20,30,40,50,45,32]
 let arr1=['a','b','c','d']
 console.log(arr);
 
+
 function statement(val) {
     return val>25
 }
