@@ -10,7 +10,7 @@ for (let i = 0; i < str.length; i++) {
                 count++
             }
         } 
-    if (count>=1) {
+    if (count>1) {
         console.log(ch+" ---> "+count);
     }   
 }
