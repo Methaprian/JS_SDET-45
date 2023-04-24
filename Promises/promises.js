@@ -5,7 +5,8 @@ async function stud(){
         setTimeout(() => {
             resolve("In Progress")
             reject("Rejected")
-        }, 3000);
+        }, 3000)
+        
     })
     await p.then((msg)=>{console.log(msg);}).catch((msg)=>{console.log(msg);})
 

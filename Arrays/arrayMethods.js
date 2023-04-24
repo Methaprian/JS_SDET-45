@@ -29,4 +29,3 @@ console.log(arr.join('->')); //----> Replaces all the Seperators and returns a S
 // console.log(arr.copyWithin(3,4));
 // console.log(arr.fill(1,2,4));
 // console.log(arr.entries()); ----------> Pending
-console.log(arr);
